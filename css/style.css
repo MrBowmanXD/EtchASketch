@@ -1,14 +1,20 @@
 .center {
   text-align: center;
 }
-
+/*
 .container {
   display: grid;
   grid-template-columns: repeat(16, 1fr);
   grid-template-rows: repeat(16, 1fr);
+  
+}
+*/
+
+.container {
+  display: grid;
 }
 
 .gridItem {
-  padding: 5px;
+  padding: 15px;
   border: 1px solid black;
 }
