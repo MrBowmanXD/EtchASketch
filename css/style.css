@@ -1,3 +1,14 @@
 .center {
   text-align: center;
 }
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+}
+
+.gridItem {
+  padding: 5px;
+  border: 1px solid black;
+}
