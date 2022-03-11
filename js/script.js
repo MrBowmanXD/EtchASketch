@@ -9,6 +9,12 @@ if (rows === 16 && columns === 16) {
   gridSize = new Array(rows * columns);
 }
 
+function reseter(gridSize) {
+  for (let i = 0; i < gridSize.length; i++) {
+    container.removeChild(gridSize[i]);
+  }
+}
+
 gridSetter(rows, columns, gridSize);
 
 function gridSetter(rows, columns, gridSize) {
@@ -23,7 +29,6 @@ function gridSetter(rows, columns, gridSize) {
     let b = Math.floor(Math.random() * 256);
 
     let bgColor = `rgb(${r}, ${g}, ${b});`;
-    console.log(bgColor);
     return bgColor;
   }
 
@@ -48,8 +53,9 @@ function gridSetter(rows, columns, gridSize) {
 }
 
 gridReset.addEventListener('click', function gridReseter() {
-  rows = prompt('How many rows would you like?');
-  columns = prompt('How many columns would you like?');
+  reseter(gridSize);
+  let rows = prompt('How many rows would you like?');
+  let columns = prompt('How many columns would you like?');
   gridSize = null;
   container.setAttribute(
     'style',
